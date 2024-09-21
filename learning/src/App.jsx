@@ -8,6 +8,8 @@ import ShowUserName from './components/ShowUserName'
 import CarDetails from './components/CarDetails'
 import Fragment from './components/Fragment'
 import Container from './components/Container'
+import UserDetails from './components/UserDetails'
+import ExecuteFunction from './components/ExecuteFunction'
 
 function App() {
   // const name = 'Peter'
@@ -19,9 +21,15 @@ function App() {
     {id: 3, brand: 'Porsche', color:'Azul', newCar:false, km: 7000}
   ]
 
+  function showMessage(){
+    console.log('Evento do componente pai!')
+  }
+
+  
   return (
     <>
       <h1>Avancando em React</h1>
+      <h2>Secao 3</h2>
       {/* Imagem em public */}
       <div>
         <img src="/img1.jpg" alt="Paisagem" />
@@ -43,6 +51,7 @@ function App() {
       {/* loop em array de objetos */}
       {cars.map((car) =>(
         <CarDetails 
+        key={car.id}
         brand={car.brand} 
         color={car.color} 
         km={car.km} 
@@ -58,6 +67,14 @@ function App() {
       <Container myValue='testing 2'>
         <h5>Testando o container</h5>
       </Container>
+      {/* executar funcao */}
+      <ExecuteFunction myFunction={showMessage}/>
+      {/* desafio 4 */}
+      <UserDetails nome='Gustavo' idade='20' profissao='Programmer'>
+        <h1>Desafio 4</h1> 
+      </UserDetails>
+      <UserDetails nome='Guilherme' idade='17' profissao='Estudante' />
+      <UserDetails nome='Bruno' idade='32' profissao='Cozinheiro' />
     </>
   )
 }
