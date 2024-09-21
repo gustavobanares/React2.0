@@ -92,8 +92,7 @@ function App() {
         key={user.id} 
         name={user.name} 
         job={user.job} 
-        age={user.age}  
-        />
+        age={user.age} />
       ))}
     </>
   )
