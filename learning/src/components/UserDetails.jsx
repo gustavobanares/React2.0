@@ -1,22 +1,15 @@
 import React from 'react'
 
-const UserDetails = ({children, nome, idade, profissao}) => {
+const UserDetails = ({name, age, job}) => {
 
     
    return( 
    
    <div>
-       {children}
-       {idade >= 18 ?(
-        <div>
-            <p>{nome} tem {idade} anos e sua profissao e: {profissao}, ele tem idade para tirar carta!</p>
-        </div>
-         ) : (
-            <div>
-                <p>{nome} tem {idade} e sua profissao e: {profissao}, nao tem idade para tirar carta!</p>
-            </div>
-       )}
-    
+       <h2>{name}</h2>
+       <p>Idade: {age}</p>
+       <p>Profissao: {job}</p>
+       {age >=18 ? (<p>Pode tirar carteira de habilitacao</p>) : (<p>Menor de idade</p>)}
     </div>
   )
 }

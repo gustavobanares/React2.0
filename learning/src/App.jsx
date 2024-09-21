@@ -33,6 +33,12 @@ function App() {
     setMessage(msg)
   }
 
+  const users = [
+    {id:1, name:'Gustavo', job:'Programador', age:20},
+    {id:2, name:'Guilherme', job:'Cozinheiro', age:32},
+    {id:3, name:'Bruno', job:'Estudante', age:17},
+  ]
+
   
   return (
     <>
@@ -80,12 +86,15 @@ function App() {
       {/* state lift */}
       <Message msg={message} />
       <ChangeMessageState handleMessage={handleMessage}/>
-      {/* desafio 4 */}
-      <UserDetails nome='Gustavo' idade='20' profissao='Programmer'>
-        <h1>Desafio 4</h1> 
-      </UserDetails>
-      <UserDetails nome='Guilherme' idade='17' profissao='Estudante' />
-      <UserDetails nome='Bruno' idade='32' profissao='Cozinheiro' />
+      {/* desafio */}
+      {users.map((user) =>(
+        <UserDetails 
+        key={user.id} 
+        name={user.name} 
+        job={user.job} 
+        age={user.age}  
+        />
+      ))}
     </>
   )
 }
