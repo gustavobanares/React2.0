@@ -44,6 +44,21 @@
       "id": "ed57",
       "name": "cabo hdmi",
       "price": "10"
+    },
+    {
+      "id": "12de",
+      "name": "suporte notebook",
+      "price": "20"
+    },
+    {
+      "id": "4e45",
+      "name": "suporte notebook",
+      "price": "20"
+    },
+    {
+      "id": "b9d8",
+      "name": "suporte notebook",
+      "price": "20"
     }
   ]
 }
