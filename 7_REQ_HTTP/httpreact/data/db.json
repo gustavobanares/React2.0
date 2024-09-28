@@ -24,6 +24,16 @@
       "id": "bf45",
       "name": "teste",
       "price": "7"
+    },
+    {
+      "id": "e572",
+      "name": "teclado",
+      "price": "110"
+    },
+    {
+      "id": "65c5",
+      "name": "cadeira",
+      "price": "200"
     }
   ]
 }
