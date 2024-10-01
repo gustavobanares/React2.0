@@ -32,7 +32,7 @@ function App() {
 //  fetchData()
 //   }, [])
 
-  // add de produtos
+  //2 - add de produtos
   const handleSubmit = async (e) =>{
     e.preventDefault()
 
