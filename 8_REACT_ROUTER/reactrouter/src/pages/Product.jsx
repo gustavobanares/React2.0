@@ -21,6 +21,8 @@ const Product = () => {
         <div>
             <h1>{product.name}</h1>
             <p>R${product.price}</p>
+            {/* 6 - nested routes */}
+            <Link to={`/products/${product.id}/info`}>Mais informacoes</Link>
         </div>
       )}
     </>
